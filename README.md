@@ -1,6 +1,8 @@
 # Object Oriented Programming (OOP)  
 
-*Object Oriented Programming* is an approach that provides a way of modularizing programs by creating partitioned memory area for both data & functions that can be used as template for creating copies of such modules on demand.  
+![oops](./assets/oops.png)
+
+**_Object Oriented Programming_** is a concept that provides a way to organize the code into objects, that are the instances of classes . It emphasise the concepts like **abstraction**, **polymorphism**, **encapsulation** and **inheritance** to improve the code reusability and maintanability .   
 
 ## Table of contents
 -   **[Objects](#objects)**
@@ -12,11 +14,81 @@
 -   **[Message Passing](#message-passing)**
 
 
+### Classes  
+
+A **class** is a blueprint or template that defines the structure and behavious of an object . It serves as a user define data-types and encapsulate data **_(attributes)_** and method **_(functions)_** that operates on that data.  
+
+**e.g:**  
+```cpp
+class Strudent {
+  // these are the attributes (data)
+    private:
+      int age;
+      int marks;
+      string name;
+    public:
+      // constructor
+      Student(string name, int age, int marks) {
+        this->name = name;
+        this->age = age;
+        this->marks = marks;
+      }
+      void setAge(int age) {
+        // logic
+      }
+
+      void setMarks(int marks) {
+        // logic
+      }
+
+      void setName(string name) {
+        // logic
+      }
+
+      string getName() {
+        return name;
+      }
+
+      int getMarks() {
+        return marks;
+      }
+
+      int getAge() {
+        return age;
+      }
+};
+```
+We have a ***Student*** class and ***setAge***, ***setName*** & ***setMarks*** are the functions.  
+for creating object we can write  
+```cpp 
+Student afzal = new Student("Md Afzal", 300, 21);  
+```  
+
+```pgsql
++-------------------------------------------+
+|              CLASS: Student               |
++-------------------------------------------+
+| A class is a user-defined data type.      |
+| It defines a blueprint for objects.       |
+|                                           |
+| Example Definition:                       |
+| class Student {                           |
+|     // this is the student class          |
+|   };                                      |
++-------------------------------------------+
+|        OBJECTS OF CLASS Student           |
++-------------------------------------------+
+| These are variables of type 'student':    |
+|                                           |
+|   Student Afzal();                        |
+|   Student Haider();                       |
+|   Student Firoz();                        |
++-------------------------------------------+
+```  
+
 ### Objects  
 
-**Objects** are the basic run-time entity in object oriented system . It may represented as a person, a place, a bank, a table of data or any item that the program has to handle.  
-Objects may also represent user-define data such as *vector*, *time* & *lists*.  
-Objects should be choosed such that they match closely with the real-life objects. Objects take place in memory.  
+The **objects** is an instance of a class . It represent a real-world entity and can hold it's own state (attribute) and behaviour (functions) define by the class .  
 
 **e.g:**  
 
@@ -34,44 +106,7 @@ Objects should be choosed such that they match closely with the real-life object
 |  - avg()             |
 |  - display()         |
 +----------------------+
-```
-
-### Classes  
-
-A class is a collection of objects of similar type or we can say objects are the variables of type class.  
-Once a class has been define, we can create any number of objects. classes are user-define data types.  
-
-**e.g:**  
-```cpp
-class fruit {
-    // this is the fruit class
-};
-```
-We have a ***fruit*** class and ***mango***, ***apple*** & ***papaya*** are the objects.  
-for creating object we can write  
-> fruit mango;  
-
-```pgsql
-+--------------------------------------+
-|              CLASS: FRUIT            |
-+--------------------------------------+
-| A class is a user-defined data type. |
-| It defines a blueprint for objects.  |
-|                                      |
-| Example Definition:                  |
-|   class fruit {                      |
-|     // this is the fruit class       |
-|   };                                 |
-+--------------------------------------+
-|          OBJECTS OF CLASS FRUIT      |
-+--------------------------------------+
-| These are variables of type 'fruit': |
-|                                      |
-|   fruit mango;                       |
-|   fruit apple;                       |
-|   fruit papaya;                      |
-+--------------------------------------+
-```
+```  
 
 ### Data Abstraction & Encapsulation  
 
